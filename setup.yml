@@ -1,0 +1,10 @@
+---
+- name: Add Google Chrome Repository
+  ansible.builtin.apt_repository:
+    repo: deb https://dl.google.com/linux/chrome/deb/ stable main
+    state: present
+    filename: google-chrome
+- name: Add Docker Repository
+  ansible.builtin.apt_repository:
+    repo: deb https://download.docker.com/linux/ubuntu focal stable
+    state: present
